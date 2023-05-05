@@ -1,0 +1,29 @@
+@import "../../theme/_variables.scss";
+@import "../../theme/_mixins.scss";
+
+.background {
+  // background-image: url(../../assets/images/bg-otp.png);
+  background-position: right -250px bottom -50px;
+  background-repeat: no-repeat;
+  background-size: 70vh;
+
+  @include devices(md) {
+    background-position: center bottom -200px;
+    background-attachment: initial;
+    background-size: 700px;
+  }
+}
+
+.container {
+  min-height: calc(100vh - $FM_HEADER_HEIGHT - $FM_FOOTER_HEIGHT);
+  padding: 60px 0;
+
+  @include devices(md) {
+    min-height: calc(100vh - $FM_HEADER_BASIC_HEIGHT_MD - $FM_FOOTER_HEIGHT_MD);
+    padding: 40px 0;
+  }
+
+  @include devices(xs) {
+    min-height: calc(100vh - $FM_HEADER_BASIC_HEIGHT_XS - $FM_FOOTER_HEIGHT_XS);
+  }
+}
